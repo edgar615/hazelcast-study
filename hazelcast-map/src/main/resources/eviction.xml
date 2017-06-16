@@ -1,0 +1,8 @@
+<hazelcast>
+    <map name="default">
+        <time-to-live-seconds>0</time-to-live-seconds>
+        <max-idle-seconds>0</max-idle-seconds>
+        <eviction-policy>LRU</eviction-policy>
+        <max-size policy="PER_NODE">5000</max-size>
+    </map>
+</hazelcast>

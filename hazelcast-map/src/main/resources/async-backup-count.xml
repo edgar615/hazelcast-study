@@ -1,0 +1,6 @@
+<hazelcast>
+    <map name="default">
+        <backup-count>0</backup-count>
+        <async-backup-count>1</async-backup-count>
+    </map>
+</hazelcast>
