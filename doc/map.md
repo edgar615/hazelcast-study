@@ -253,3 +253,20 @@ Hazelcast内部使用下面的公式计算每个公式的最大数量：
        <map-eviction-policy-class-name>com.package.OddEvictor</map-eviction-policy-class-name>
        ....
     </map>
+
+Setting In-Memory Format
+
+略
+
+加载和存储持久化数据
+
+Hazelcast允许你从持久化数据（例如关系数据库）中加载或者保存分布式map entries.可以使用Hazelcast的MapStore和MapLoader接口
+
+如果从内存中没有取到对应的数据（IMap.get()），可以通过MapLoader中的load方法或者loadall方法从数据加载数据．
+加载的数据会被放置到map中，并将一直保留再那里，直到它被移除或被驱逐为止
+
+MapStore接口可以将数据保存到用户定义的存储层
+
+当一个mapstore实施提供，入口也投入到一个用户定义的数据存储。
+
+*注意：*　数据持久层需要被所有的节点访问到
